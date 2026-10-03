@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bryntt — Coder | Website Builder | Ads Maker</title>
+
+<meta name="description"
+content="Bryntt — Coder, Website Builder and Ads Maker. Building modern websites, digital projects and creative advertisements.">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #060606;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: rgba(6,6,6,.88);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #ffffff14;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.logo-symbol {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #ffffff35;
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: 900;
+
+    background: linear-gradient(
+        145deg,
+        #222,
+        #080808
+    );
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #999;
+    font-size: 13px;
+    transition: .2s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.nav-button {
+    padding: 10px 17px;
+
+    border: 1px solid #ffffff25;
+    border-radius: 30px;
+
+    color: white !important;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 100px 7%;
+}
+
+.availability {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border: 1px solid #ffffff20;
+    border-radius: 30px;
+
+    color: #999;
+
+    font-size: 11px;
+
+    margin-bottom: 25px;
+}
+
+.availability span {
+    color: #ddd;
+}
+
+.eyebrow {
+    color: #666;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(52px, 8vw, 105px);
+
+    line-height: .9;
+
+    letter-spacing: -6px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 em {
+    color: #888;
+    font-style: normal;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    color: #888;
+
+    font-size: 17px;
+
+    margin-bottom: 32px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 20px;
+
+    border-radius: 5px;
+
+    border: 1px solid #ffffff20;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: .25s;
+}
+
+.button.primary {
+    background: white;
+    color: black;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: white;
+    color: black;
+}
+
+/* =========================
+   HERO VISUAL
+========================= */
+
+.hero-visual {
+    height: 500px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.big-letter {
+    font-size: 300px;
+
+    font-weight: 900;
+
+    color: #151515;
+
+    line-height: 1;
+
+    user-select: none;
+
+    text-shadow:
+        1px 1px #ffffff10;
+}
+
+.orbit {
+    position: absolute;
+
+    border: 1px solid #ffffff18;
+
+    border-radius: 50%;
+}
+
+.orbit.one {
+    width: 480px;
+    height: 180px;
+
+    transform: rotate(-25deg);
+}
+
+.orbit.two {
+    width: 350px;
+    height: 450px;
+
+    transform: rotate(30deg);
+}
+
+.floating {
+    position: absolute;
+
+    padding: 13px 16px;
+
+    background: #111;
+
+    border: 1px solid #ffffff18;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 11px;
+}
+
+.floating small {
+    color: #666;
+}
+
+.floating.one {
+    top: 90px;
+    right: 0;
+}
+
+.floating.two {
+    bottom: 80px;
+    left: 0;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section:not(.hero) {
+    width: 86%;
+
+    margin: auto;
+
+    padding: 120px 0;
+
+    border-top: 1px solid #ffffff12;
+}
+
+.section-title {
+    font-size: clamp(42px, 6vw, 72px);
+
+    letter-spacing: -4px;
+
+    line-height: 1;
+
+    margin-bottom: 15px;
+}
+
+.section-title em {
+    color: #888;
+    font-style: normal;
+}
+
+.section-description {
+    max-width: 550px;
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 45px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.project {
+    background: #0c0c0c;
+
+    border: 1px solid #ffffff12;
+
+    overflow: hidden;
+
+    transition: .3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+
+    border-color: #ffffff35;
+}
+
+.project-image {
+    height: 280px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.project:nth-child(1)
+.project-image {
+    background:
+        radial-gradient(
+            circle at center,
+            #333,
+            #090909
+        );
+}
+
+.project:nth-child(2)
+.project-image {
+    background:
+        linear-gradient(
+            135deg,
+            #242424,
+            #080808
+        );
+}
+
+.project:nth-child(3)
+.project-image {
+    background:
+        linear-gradient(
+            145deg,
+            #1e1e1e,
+            #060606
+        );
+}
+
+.project:nth-child(4)
+.project-image {
+    background:
+        linear-gradient(
+            135deg,
+            #191919,
+            #080808
+        );
+}
+
+.mock-window {
+    width: 75%;
+    height: 65%;
+
+    background: #080808;
+
+    border: 1px solid #333;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.mock-window strong {
+    font-size: 40px;
+
+    letter-spacing: -3px;
+}
+
+.mock-window small {
+    color: #666;
+}
+
+.ad-design {
+    font-size: 35px;
+
+    font-weight: 900;
+
+    line-height: .9;
+
+    letter-spacing: -2px;
+}
+
+.store-design {
+    border: 1px solid #333;
+
+    width: 70%;
+    height: 75%;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.store-design strong {
+    font-size: 35px;
+
+    line-height: .9;
+}
+
+.dashboard {
+    width: 80%;
+
+    padding: 25px;
+
+    border: 1px solid #333;
+
+    background: #090909;
+}
+
+.chart {
+    height: 100px;
+
+    display: flex;
+
+    align-items: end;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.chart span {
+    flex: 1;
+
+    background: #777;
+
+    height: 40%;
+}
+
+.chart span:nth-child(2) {
+    height: 55%;
+}
+
+.chart span:nth-child(3) {
+    height: 45%;
+}
+
+.chart span:nth-child(4) {
+    height: 70%;
+}
+
+.chart span:nth-child(5) {
+    height: 85%;
+}
+
+.project-info {
+    padding: 24px;
+}
+
+.project-number {
+    color: #555;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.project h3 {
+    font-size: 25px;
+
+    margin: 20px 0 8px;
+}
+
+.project p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-container {
+    display: grid;
+
+    grid-template-columns: .4fr 1.6fr;
+
+    gap: 80px;
+}
+
+.about-letter {
+    font-size: 190px;
+
+    font-weight: 900;
+
+    color: #151515;
+
+    line-height: .7;
+}
+
+.about-text {
+    max-width: 750px;
+}
+
+.about-text h2 {
+    font-size: clamp(38px, 5vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+.about-text h2 em {
+    color: #888;
+
+    font-style: normal;
+}
+
+.about-text p {
+    color: #777;
+
+    margin-bottom: 20px;
+
+    font-size: 15px;
+}
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 30px;
+}
+
+.skill {
+    padding: 7px 10px;
+
+    border: 1px solid #ffffff18;
+
+    color: #999;
+
+    font-size: 10px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+.contact-title {
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: .95;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 25px;
+}
+
+.contact-title em {
+    color: #888;
+
+    font-style: normal;
+}
+
+.contact-description {
+    color: #777;
+
+    max-width: 500px;
+}
+
+.contact-details {
+    margin-top: 40px;
+
+    border-top: 1px solid #ffffff15;
+}
+
+.contact-details a {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #ffffff15;
+}
+
+.contact-details small {
+    color: #555;
+
+    letter-spacing: 2px;
+
+    font-size: 9px;
+}
+
+.contact-details strong {
+    margin-top: 5px;
+
+    font-size: 14px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+form {
+    background: #0b0b0b;
+
+    border: 1px solid #ffffff14;
+
+    padding: 30px;
+}
+
+form label {
+    display: block;
+
+    color: #888;
+
+    font-size: 11px;
+
+    margin-bottom: 20px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    display: block;
+
+    margin-top: 7px;
+
+    padding: 13px;
+
+    background: #070707;
+
+    border: 1px solid #242424;
+
+    color: white;
+
+    outline: none;
+
+    font-family: inherit;
+
+    border-radius: 3px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #777;
+}
+
+form button {
+    width: 100%;
+
+    cursor: pointer;
+}
+
+.form-note {
+    display: block;
+
+    color: #555;
+
+    font-size: 9px;
+
+    margin-top: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: 86%;
+
+    margin: auto;
+
+    padding: 30px 0 40px;
+
+    border-top: 1px solid #ffffff12;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 850px) {
+
+    header {
+        width: 94%;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 3%;
+
+        right: 3%;
+
+        padding: 20px;
+
+        background: #0b0b0b;
+
+        border: 1px solid #ffffff20;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 80px;
+    }
+
+    .hero-visual {
+        height: 350px;
+    }
+
+    .big-letter {
+        font-size: 220px;
+    }
+
+    .orbit.one {
+        width: 350px;
+    }
+
+    .orbit.two {
+        width: 270px;
+        height: 350px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .about-letter {
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .hero h1 {
+        font-size: 55px;
+
+        letter-spacing: -4px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    section:not(.hero) {
+        width: 92%;
+
+        padding: 85px 0;
+    }
+
+    .hero {
+        width: 92%;
+    }
+
+    .project-image {
+        height: 240px;
+    }
+
+    .mock-window strong {
+        font-size: 30px;
+    }
+
+    footer {
+        width: 92%;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <div class="logo-symbol">B</div>
+    BRYNTT
+</div>
+
+<button
+class="menu-button"
+onclick="toggleMenu()"
+style="display:none;background:none;border:0;color:white;font-size:24px;">
+☰
+</button>
+
+<nav id="navigation">
+
+<a href="#work">Work</a>
+
+<a href="#about">About</a>
+
+<a href="#contact">Contact</a>
+
+<a class="nav-button" href="#contact">
+Let's Talk ↗
+</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div>
+
+<div class="availability">
+<span>●</span> Available for projects
+</div>
+
+<p class="eyebrow">
+CODER / WEBSITE BUILDER / ADS MAKER
+</p>
+
+<h1>
+I build digital
+<br>
+<em>experiences</em>
+<br>
+that get noticed.
+</h1>
+
+<p class="hero-description">
+I create clean websites, digital projects, and attention-grabbing
+ads for people and businesses that want to build their presence online.
+</p>
+
+<div class="buttons">
+
+<a class="button primary" href="#work">
+Explore my work ↓
+</a>
+
+<a class="button" href="#contact">
+Start a project ↗
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-visual">
+
+<div class="orbit one"></div>
+
+<div class="orbit two"></div>
+
+<div class="big-letter">
+B
+</div>
+
+<div class="floating one">
+<b>&lt;/&gt;</b>
+
+<div>
+CODE
+<br>
+<small>Clean & responsive</small>
+</div>
+
+</div>
+
+<div class="floating two">
+
+<b>✦</b>
+
+<div>
+ADS
+<br>
+<small>Made to stand out</small>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+
+<section id="work">
+
+<p class="eyebrow">
+01 / FEATURED WORK
+</p>
+
+<h2 class="section-title">
+Things I've <em>built.</em>
+</h2>
+
+<p class="section-description">
+A selection of digital concepts and projects.
+Replace these examples with your real projects as your portfolio grows.
+</p>
+
+
+<div class="projects">
+
+
+<!-- PROJECT 1 -->
+
+<article class="project">
+
+<div class="project-image">
+
+<div class="mock-window">
+
+<small>
+BRYNTT / PORTFOLIO
+</small>
+
+<strong>
+BRYNTT.
+</strong>
+
+<small>
+CODER • BUILDER • CREATOR
+</small>
+
+</div>
+
+</div>
+
+<div class="project-info">
+
+<div class="project-number">
+01 · WEB DEVELOPMENT
+</div>
+
+<h3>
+Personal Portfolio
+</h3>
+
+<p>
+A modern personal website designed to present skills,
+projects, and contact information professionally.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 2 -->
+
+<article class="project">
+
+<div class="project-image">
+
+<div class="store-design">
+
+<small>
+NEW DROP
+</small>
+
+<strong>
+YOUR
+<br>
+BRAND.
+</strong>
+
+<small>
+SHOP NOW →
+</small>
+
+</div>
+
+</div>
+
+<div class="project-info">
+
+<div class="project-number">
+02 · WEBSITE
+</div>
+
+<h3>
+Brand Store Concept
+</h3>
+
+<p>
+A clean storefront concept with strong visual hierarchy
+and conversion-focused design.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 3 -->
+
+<article class="project">
+
+<div class="project-image">
+
+<div class="ad-design">
+
+STOP
+<br>
+SCROLLING.
+<br>
+MAKE YOUR
+<br>
+BRAND
+<br>
+UNMISSABLE.
+
+</div>
+
+</div>
+
+<div class="project-info">
+
+<div class="project-number">
+03 · AD CREATIVE
+</div>
+
+<h3>
+Social Ad Campaign
+</h3>
+
+<p>
+Short-form advertising concepts designed to grab attention
+quickly and communicate a clear message.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 4 -->
+
+<article class="project">
+
+<div class="project-image">
+
+<div class="dashboard">
+
+<small>
+CAMPAIGN OVERVIEW
+</small>
+
+<div class="chart">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<small>
+REACH 18.4K · CLICKS 2.1K · CTR 11.4%
+</small>
+
+</div>
+
+</div>
+
+<div class="project-info">
+
+<div class="project-number">
+04 · DIGITAL PROJECT
+</div>
+
+<h3>
+Campaign Dashboard
+</h3>
+
+<p>
+A simple analytics concept for presenting campaign
+performance in an easy-to-understand way.
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="about-container">
+
+<div class="about-letter">
+B
+</div>
+
+<div class="about-text">
+
+<p class="eyebrow">
+02 / ABOUT ME
+</p>
+
+<h2>
+I'm Bryntt — a
+<em>builder</em>
+who likes turning ideas into something real.
+</h2>
+
+<p>
+I'm focused on coding, website building, and digital advertising.
+I enjoy learning how technology works and using that knowledge
+to create projects that look good, work well, and communicate clearly.
+</p>
+
+<p>
+I'm continuously developing my skills through personal projects,
+experimentation, and learning. This portfolio is a place to document
+that journey and connect with businesses looking for someone who can
+help bring a digital idea to life.
+</p>
+
+
+<div class="skills">
+
+<span class="skill">
+HTML / CSS
+</span>
+
+<span class="skill">
+JavaScript
+</span>
+
+<span class="skill">
+Web Design
+</span>
+
+<span class="skill">
+Responsive Websites
+</span>
+
+<span class="skill">
+Ad Creative
+</span>
+
+<span class="skill">
+Digital Projects
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="contact-container">
+
+
+<div>
+
+<p class="eyebrow">
+03 / CONTACT
+</p>
+
+<h2 class="contact-title">
+
+Have an idea?
+
+<br>
+
+<em>Let's build it.</em>
+
+</h2>
+
+<p class="contact-description">
+
+Tell me what you're working on and what you need.
+I'll get back to you through email.
+
+</p>
+
+
+<div class="contact-details">
+
+<a href="mailto:sanchezbryntt@gmail.com">
+
+<small>
+EMAIL
+</small>
+
+<strong>
+sanchezbryntt@gmail.com
+</strong>
+
+</a>
+
+
+<a href="tel:+639913721137">
+
+<small>
+PHONE
+</small>
+
+<strong>
+0991 372 1137
+</strong>
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<form
+action="mailto:sanchezbryntt@gmail.com"
+method="post"
+enctype="text/plain"
+>
+
+<label>
+
+Name
+
+<input
+type="text"
+name="Name"
+placeholder="Your name"
+required
+>
+
+</label>
+
+
+<label>
+
+Email
+
+<input
+type="email"
+name="Email"
+placeholder="you@example.com"
+required
+>
+
+</label>
+
+
+<label>
+
+What do you need?
+
+<select name="Project Type">
+
+<option>
+Website
+</option>
+
+<option>
+Ad Creative
+</option>
+
+<option>
+Website + Ads
+</option>
+
+<option>
+Other
+</option>
+
+</select>
+
+</label>
+
+
+<label>
+
+Message
+
+<textarea
+name="Message"
+rows="6"
+placeholder="Tell me about your project..."
+required
+></textarea>
+
+</label>
+
+
+<button
+class="button primary"
+type="submit"
+>
+
+Send inquiry ↗
+
+</button>
+
+
+<small class="form-note">
+
+This form opens the visitor's email application.
+A form service can be connected later for direct submissions.
+
+</small>
+
+</form>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<strong>
+BRYNTT
+</strong>
+
+<span>
+Coder · Website Builder · Ads Maker
+</span>
+
+<span>
+© <span id="year"></span> Bryntt
+</span>
+
+</footer>
+
+
+<script>
+
+function toggleMenu() {
+
+const nav =
+document.getElementById("navigation");
+
+nav.classList.toggle("show");
+
+}
+
+document
+.getElementById("year")
+.textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+
+</html>
